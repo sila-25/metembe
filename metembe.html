@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>St. John's Metembe Secondary School - Center of Learning, Discipline, and Growth</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --maroon: #800000;
+            --royal-blue: #1E3A8A;
+            --golden-yellow: #FBBF24;
+            --emerald-green: #10B981;
+            --white: #FFFFFF;
+            --light-grey: #F3F4F6;
+            --dark-grey: #4B5563;
+            --light-blue: #e6f0ff; /* Added light blue color */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: var(--maroon);
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles - Changed to light blue */
+        header {
+            background-color: var(--royal-blue); /* Changed to light blue */
+            box-shadow: 0 2px 10px rgba(28, 38, 231, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+        }
+
+        .logo-text {
+            margin-left: 15px;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            margin: 0;
+            color: var(--maroon);
+        }
+
+        .logo p {
+            font-size: 0.8rem;
+            color: var(--royal-blue);
+            margin: 0;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+           
+        }
+
+        .nav-menu li {
+            margin-left: 25px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--dark-grey);
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--maroon);
+        }
+
+        .search-login {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar {
+            position: relative;
+            margin-right: 20px;
+        }
+
+        .search-bar input {
+            padding: 8px 15px;
+            border: 1px solid var(--light-grey);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            width: 180px;
+        }
+
+        .search-bar button {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--maroon);
+            cursor: pointer;
+        }
+
+        .portal-btn {
+            background-color: var(--maroon);
+            color: var(--white);
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .portal-btn:hover {
+            background-color: var(--royal-blue);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--maroon);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            margin-top: 90px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .cta-btn {
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .cta-btn.primary {
+            background-color: var(--maroon);
+            color: var(--white);
+        }
+
+        .cta-btn.secondary {
+            background-color: var(--royal-blue);
+            color: var(--white);
+        }
+
+        .cta-btn.accent {
+            background-color: var(--golden-yellow);
+            color: var(--maroon);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--maroon);
+        }
+
+        /* About Section - Modified layout */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text {
+            order: 1; /* Text on the left */
+        }
+
+        .about-image {
+            order: 2; /* Image on the right */
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: table;
+            transition: transform 0.5s ease;
+        }
+
+        .about-image img:hover {
+            transform: scale(1.05);
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        /* Academics Section */
+        .academics {
+            background-color: var(--light-grey);
+        }
+
+        .academics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .academic-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .academic-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .academic-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .academic-content {
+            padding: 20px;
+        }
+
+        .academic-content h3 {
+            color: var(--royal-blue);
+            margin-bottom: 10px;
+        }
+
+        /* Student Life */
+        .life-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .life-card {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 300px;
+        }
+
+        .life-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .life-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .life-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            padding: 20px;
+            color: var(--white);
+        }
+
+        .life-overlay h3 {
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+
+        /* News & Events */
+        .news {
+            background-color: var(--light-grey);
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .news-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .news-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .news-content {
+            padding: 20px;
+        }
+
+        .news-date {
+            color: var(--maroon);
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* Admissions */
+        .admissions-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .admissions-info {
+            margin-bottom: 30px;
+        }
+
+        .admissions-list {
+            list-style-type: none;
+        }
+
+        .admissions-list li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .admissions-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--emerald-green);
+            font-weight: bold;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background-color: var(--emerald-green);
+            color: var(--white);
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background-color: var(--royal-blue);
+        }
+
+        /* Resources */
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .resource-card {
+            background-color: var(--white);
+            border: 1px solid var(--light-grey);
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .resource-icon {
+            font-size: 2.5rem;
+            color: var(--maroon);
+            margin-bottom: 15px;
+        }
+
+        .resource-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--royal-blue);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        /* Contact */
+        .contact {
+            background-color: var(--light-grey);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info h3 {
+            color: var(--royal-blue);
+            margin-bottom: 20px;
+        }
+
+        .contact-details {
+            list-style-type: none;
+        }
+
+        .contact-details li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-details i {
+            margin-right: 15px;
+            color: var(--maroon);
+            font-size: 1.2rem;
+            width: 20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .contact-form textarea {
+            min-height: 150px;
+        }
+
+        .submit-btn {
+            background-color: var(--maroon);
+            color: var(--white);
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--royal-blue);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--maroon);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: var(--golden-yellow);
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-col ul {
+            list-style-type: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--golden-yellow);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: background-color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background-color: var(--golden-yellow);
+            color: var(--maroon);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-content,
+            .admissions-content,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 90px;
+                left: -100%;
+                flex-direction: column;
+                background-color: var(--white);
+                width: 100%;
+                height: calc(100vh - 90px);
+                padding: 40px;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                transition: left 0.3s ease;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-menu li {
+                margin: 15px 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .search-bar {
+                display: none;
+            }
+
+            .hero {
+                height: auto;
+                padding: 80px 0;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .logo h1 {
+                font-size: 1.2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .cta-btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="Images/LOGO.jpg" alt="St. John's Metembe Secondary School Logo">
+                <div class="logo-text">
+                    <h1>St. John's Metembe</h1>
+                    <p>Secondary School - Center of Excellence</p>
+                </div>
+            </div>
+
+            <nav>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#academics">Academics</a></li>
+                    <li><a href="#admissions">Admissions</a></li>
+                    <li><a href="#student-life">Student Life</a></li>
+                    <li><a href="#news">News & Events</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="search-login">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <button class="portal-btn">Student Portal</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h2>Excellence in Education, Discipline, and Character</h2>
+            <p>Preparing students for a bright future since 1974</p>
+            <div class="cta-buttons">
+                <a href="#teachers" class="cta-btn primary">Teachers</a>
+                <a href="#students" class="cta-btn secondary">Students</a>
+                <a href="#staff" class="cta-btn accent">Staff</a>
+                <a href="#classes" class="cta-btn primary">Classes</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Our School</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>St. John’s Metembe Secondary School traces its roots back to 1974, when it was established through the efforts of the late Dr. Zachary Onyonka, then the Member of Parliament for Kitutu Chache. The school was first founded as a boarding institution for girls under the name Metembe Girls, and it played a significant role in expanding access to secondary education in the region. Shortly afterward, sponsorship was taken over by the Catholic Church, which provided stability and guidance in its formative years. It was at this point that the school adopted its current name, St. John’s Metembe Secondary School, marking the beginning of its long journey as an institution of learning.
+
+The early years of the school were marked by both promise and challenges. During the late 1990s, particularly between 1997 and 1999, the school experienced its highest enrolment, reaching close to 400 students. This period represented the peak of its student population. However, the rapid growth of nearby secondary schools such as Nyansakia, Nyakeyo, Omogumo, Tambacha, and Nyakoora gradually reduced the catchment area, leading to a noticeable decline in numbers. The competition for students became a defining factor in the decades that followed, reshaping the fortunes of St. John’s Metembe.
+
+The year 1979 stands out as one of the most difficult moments in the school’s history. Enrolment dropped sharply to the point where closure seemed almost inevitable. It was only through the intervention of the District Education Office, which engaged the local community and emphasized the importance of education, that the school remained open. Government support in the form of grants also played a crucial role in sustaining operations, though the issue of levies and community contributions remained a recurring challenge. Despite these obstacles, the school managed to remain afloat, a testimony to the resilience of both its leadership and the surrounding community.
+
+Leadership at St. John’s Metembe has passed through the hands of a number of principals, each contributing to the institution in their own time. The first Teachers Service Commission–appointed principal was Mr. Nyambeche, who laid the foundation for administration and academic structure. He was succeeded by Mr. Nyaseti, under whose tenure the school continued to build its systems. In 1996, Mr. Pingo assumed office, working with a staff of five T.S.C. teachers to strengthen the academic program. His tenure was followed in 2004 by Mr. Erick Onsongo, who in turn was succeeded in 2006 by Mr. Patric Otwori, serving until 2011. Afterward, Mr. Zachary Nyagoto took over, guiding the school from 2011 until his departure in 2018.
+
+The next phase of leadership began in 2019, when Mr. Christopher Ayieko K. became principal. His tenure lasted until 2021, during which time the school’s enrolment rose to about 278 students, reflecting renewed growth in student numbers. In 2021, leadership was handed over to Mr. Kenneth Ogato, who served until January 2025. At the start of 2025, Mr. Evans Mogere assumed office and is the current principal.
+
+Today, St. John’s Metembe stands at a transitional point. The school has an enrolment of 118 students, organized into three classes: Form 2, Form 3, and Form 4. In line with the national transition from the 8-4-4 system to the Competency-Based Education (CBE) curriculum, the Form 1 class was not admitted, and the traditional intake has been phased out. This shift marks both a challenge and an opportunity, as the school adapts to changing educational policies while continuing to serve the local community.</p>
+                </div>
+                <div class="about-image">
+                    <img src="Images/group.jpg" alt="School History">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academics Section -->
+    <section id="academics" class="academics">
+        <div class="container">
+            <div class="section-title">
+                <h2>Academics</h2>
+            </div>
+            <div class="academics-grid">
+                <div class="academic-card">
+                    <img src="Images/subjects.jpg" alt="Curriculum">
+                    <div class="academic-content">
+                        <h3>Curriculum</h3>
+                        <p>We follow the Kenyan curriculum with a focus on holistic education that prepares students for university and beyond.</p>
+                    </div>
+                </div>
+                <div class="academic-card">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80 " alt="Subjects">
+                    <div class="academic-content">
+                        <h3>Subjects Offered</h3>
+                        <p>We offer a wide range of subjects including Sciences, Humanities, Languages, and Technical subjects.</p>
+                    </div>
+                </div>
+                <div class="academic-card">
+                    <img src="Images/teachers.jpg" alt="Faculty">
+                    <div class="academic-content">
+                        <h3>Faculty Highlights</h3>
+                        <p>Our teachers are highly qualified and dedicated to providing the best education to our students.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Life Section -->
+    <section id="student-life" class="student-life">
+        <div class="container">
+            <div class="section-title">
+                <h2>Student Life</h2>
+            </div>
+            <div class="life-grid">
+                <div class="life-card">
+                    <img src="images/practice1.jpg" alt="Clubs">
+                    <div class="life-overlay">
+                        <h3>Clubs & Societies</h3>
+                        <p>Various clubs including Science Club, Debate Club, and Environmental Club.</p>
+                    </div>
+                </div>
+                <div class="life-card">
+                    <img src="https://images.unsplash.com/photo-1552667466-07770ae110d0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Sports">
+                    <div class="life-overlay">
+                        <h3>Sports</h3>
+                        <p>Football, basketball, volleyball, athletics, and more.</p>
+                    </div>
+                </div>
+                <div class="life-card">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Cultural Activities">
+                    <div class="life-overlay">
+                        <h3>Cultural Activities</h3>
+                        <p>Music, drama, and art programs to nurture creativity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Events Section -->
+    <section id="news" class="news">
+        <div class="container">
+            <div class="section-title">
+                <h2>News & Events</h2>
+            </div>
+            <div class="news-grid">
+                <div class="news-card">
+                    <img src="https://images.unsplash.com/photo-1552667466-07770ae110d0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Event" height="50%">
+                    <div class="news-content">
+                        <span class="news-date">October 11, 2025</span>
+                        <h3>Annual Sports Day</h3>
+                        <p>Join us for our annual sports day competition with various activities and games.</p>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <img src="Images/Achievements2.jpg" alt="Event" style="height: 50%;">
+                    <div class="news-content">
+                        <span class="news-date">October 15, 2025</span>
+                        <h3>Science Fair</h3>
+                        <p>Our students will showcase their innovative science projects at the annual science fair.</p>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <img src="images/teachers.jpg" alt="Event" height="50%">
+                    <div class="news-content">
+                        <span class="news-date">October 20, 2025</span>
+                        <h3>Parents Meeting</h3>
+                        <p>Quarterly parents meeting to discuss student progress and school development.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admissions Section -->
+    <section id="admissions" class="admissions">
+        <div class="container">
+            <div class="section-title">
+                <h2>Admissions</h2>
+            </div>
+            <div class="admissions-content">
+                <div class="admissions-info">
+                    <h3>Join Our Community</h3>
+                    <p>We are currently accepting applications for the upcoming academic year. Below are the requirements and process for admission.</p>
+                    
+                    <h4>Admission Requirements</h4>
+                    <ul class="admissions-list">
+                        <li>Completed application form</li>
+                        <li>Copy of birth certificate</li>
+                        <li>KCPE results slip</li>
+                        <li>Two recent passport photos</li>
+                        <li>Medical report form</li>
+                    </ul>
+                    
+                    <a href="#" class="download-btn">Download Admission Letter</a>
+                </div>
+                <div class="admissions-image">
+                    <img src="Images/subjects1.jpg" alt="Admissions" class="about-image" style="width: 500px;height: auto;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="resources">
+        <div class="container">
+            <div class="section-title">
+                <h2>Resources</h2>
+            </div>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>E-Library</h3>
+                    <p>Access our digital library resources</p>
+                    <a href="#" class="resource-link">Access Now</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Exam Timetables</h3>
+                    <p>View and download exam schedules</p>
+                    <a href="#" class="resource-link">View Timetables</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Student Portal</h3>
+                    <p>Access your academic information</p>
+                    <a href="#" class="resource-link">Login</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Staff Portal</h3>
+                    <p>Resources for teachers and staff</p>
+                    <a href="#" class="resource-link">Login</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <ul class="contact-details">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Metembe, Kitutu Chache, Kenya</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>0728 938 862</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@stjohnsmetembe.ac.ke</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Monday - Friday: 8:00 AM - 5:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="text" placeholder="Subject" required>
+                        <textarea placeholder="Your Message" required></textarea>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>St. John's Metembe</h3>
+                    <p>A center of learning, discipline, and growth since 1974. Preparing students for a successful future through quality education.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#academics">Academics</a></li>
+                        <li><a href="#admissions">Admissions</a></li>
+                        <li><a href="#news">News & Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">E-Library</a></li>
+                        <li><a href="#">Exam Timetables</a></li>
+                        <li><a href="#">Student Portal</a></li>
+                        <li><a href="#">Staff Portal</a></li>
+                        <li><a href="#">Downloads</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li>Metembe, Kitutu Chache</li>
+                        <li>0728 938 862</li>
+                        <li>info@stjohnsmetembe.ac.ke</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 St. John's Metembe Secondary School. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navMenu.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+
+        // Student Portal Button Functionality
+        const portalBtn = document.querySelector('.portal-btn');
+        portalBtn.addEventListener('click', function() {
+            // You can replace this URL with your actual student portal URL
+            window.open('https://example-student-portal.com', '_blank');
+        });
+
+        // Smooth Scrolling for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    if (navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 90,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Simple Animation on Scroll
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Sticky Header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+                header.style.background = 'var(--light-blue)';
+            } else {
+                header.style.boxShadow = 'none';
+                header.style.background = 'var(--light-blue)';
+            }
+        });
+    </script>
+</body>
+</html>
