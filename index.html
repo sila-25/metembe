@@ -15,7 +15,7 @@
             --white: #FFFFFF;
             --light-grey: #F3F4F6;
             --dark-grey: #4B5563;
-            --light-blue: #e6f0ff; /* Added light blue color */
+            --light-blue: #e6f0ff;
         }
 
         * {
@@ -46,9 +46,9 @@
             padding: 0 20px;
         }
 
-        /* Header Styles - Changed to light blue */
+        /* Header Styles - Fixed to light blue */
         header {
-            background-color: var(--royal-blue); /* Changed to light blue */
+            background-color: var(--light-blue);
             box-shadow: 0 2px 10px rgba(28, 38, 231, 0.1);
             position: fixed;
             width: 100%;
@@ -92,7 +92,6 @@
         .nav-menu {
             display: flex;
             list-style: none;
-           
         }
 
         .nav-menu li {
@@ -116,45 +115,6 @@
             align-items: center;
         }
 
-        .search-bar {
-            position: relative;
-            margin-right: 20px;
-        }
-
-        .search-bar input {
-            padding: 8px 15px;
-            border: 1px solid var(--light-grey);
-            border-radius: 20px;
-            font-size: 0.9rem;
-            width: 180px;
-        }
-
-        .search-bar button {
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: none;
-            border: none;
-            color: var(--maroon);
-            cursor: pointer;
-        }
-
-        .portal-btn {
-            background-color: var(--maroon);
-            color: var(--white);
-            border: none;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .portal-btn:hover {
-            background-color: var(--royal-blue);
-        }
-
         .mobile-menu-btn {
             display: none;
             font-size: 1.5rem;
@@ -166,7 +126,7 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/group.jpg');
             background-size: cover;
             background-position: center;
             height: 80vh;
@@ -229,6 +189,69 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
+        /* Admin Login Form */
+        .admin-login-form {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .admin-login-form.hidden {
+            display: none;
+        }
+
+        .admin-login-form h3 {
+            color: var(--maroon);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark-grey);
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .login-btn {
+            background-color: var(--maroon);
+            color: var(--white);
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        .login-btn:hover {
+            background-color: var(--royal-blue);
+        }
+
+        .login-error {
+            color: #e74c3c;
+            text-align: center;
+            margin-top: 15px;
+            display: none;
+        }
+
         /* Section Styles */
         section {
             padding: 80px 0;
@@ -266,11 +289,11 @@
         }
 
         .about-text {
-            order: 1; /* Text on the left */
+            order: 1;
         }
 
         .about-image {
-            order: 2; /* Image on the right */
+            order: 2;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -290,6 +313,27 @@
         .about-text p {
             margin-bottom: 20px;
             font-size: 1.1rem;
+        }
+
+        .read-more-content {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .read-more-btn {
+            background-color: var(--royal-blue);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .read-more-btn:hover {
+            background-color: var(--maroon);
         }
 
         /* Academics Section */
@@ -317,7 +361,7 @@
 
         .academic-card img {
             width: 100%;
-            height: 200px;
+            height: 250px;
             object-fit: cover;
         }
 
@@ -341,7 +385,7 @@
             position: relative;
             border-radius: 10px;
             overflow: hidden;
-            height: 300px;
+            height: 350px;
         }
 
         .life-card img {
@@ -390,7 +434,7 @@
 
         .news-card img {
             width: 100%;
-            height: 200px;
+            height: 250px;
             object-fit: cover;
         }
 
@@ -450,6 +494,13 @@
             background-color: var(--royal-blue);
         }
 
+        .admissions-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
         /* Resources */
         .resources-grid {
             display: grid;
@@ -499,6 +550,7 @@
         .contact-info h3 {
             color: var(--royal-blue);
             margin-bottom: 20px;
+            font-size: 1.2rem;
         }
 
         .contact-details {
@@ -547,6 +599,19 @@
             background-color: var(--royal-blue);
         }
 
+        .map-container {
+            margin-top: 30px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+        }
+
         /* Footer */
         footer {
             background-color: var(--maroon);
@@ -583,6 +648,7 @@
 
         .footer-col ul li a:hover {
             color: var(--golden-yellow);
+            text-decoration: underline;
         }
 
         .social-icons {
@@ -625,6 +691,10 @@
             .hero h2 {
                 font-size: 2rem;
             }
+
+            .admissions-image img {
+                height: 300px;
+            }
         }
 
         @media (max-width: 768px) {
@@ -653,10 +723,6 @@
                 display: block;
             }
 
-            .search-bar {
-                display: none;
-            }
-
             .hero {
                 height: auto;
                 padding: 80px 0;
@@ -683,6 +749,10 @@
 
             .section-title h2 {
                 font-size: 1.8rem;
+            }
+
+            .admissions-image img {
+                height: 250px;
             }
         }
     </style>
@@ -716,11 +786,7 @@
             </nav>
 
             <div class="search-login">
-                <div class="search-bar">
-                    <input type="text" placeholder="Search...">
-                    <button><i class="fas fa-search"></i></button>
-                </div>
-                <button class="portal-btn">Student Portal</button>
+                <!-- Student portal button removed as requested -->
             </div>
         </div>
     </header>
@@ -730,11 +796,28 @@
         <div class="container hero-content">
             <h2>Excellence in Education, Discipline, and Character</h2>
             <p>Preparing students for a bright future since 1974</p>
-            <div class="cta-buttons">
-                <a href="#teachers" class="cta-btn primary">Teachers</a>
-                <a href="#students" class="cta-btn secondary">Students</a>
-                <a href="#staff" class="cta-btn accent">Staff</a>
-                <a href="#classes" class="cta-btn primary">Classes</a>
+            
+            <!-- Admin Login Form -->
+            <div class="admin-login-form" id="adminLoginForm">
+                <h3>Admin Login</h3>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter admin username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter admin password" required>
+                </div>
+                <button type="button" class="login-btn" onclick="login()">Login</button>
+                <p class="login-error" id="loginError">Invalid username or password. Please try again.</p>
+            </div>
+            
+            <!-- CTA Buttons (initially hidden) -->
+            <div class="cta-buttons hidden" id="adminButtons">
+                <a href="teachers.html" class="cta-btn primary private">Teachers</a>
+                <a href="students.html" class="cta-btn secondary private">Students</a>
+                <a href="staff.html" class="cta-btn accent private">Staff</a>
+                <a href="classes.html" class="cta-btn primary private">Classes</a>
             </div>
         </div>
     </section>
@@ -747,17 +830,17 @@
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p>St. John’s Metembe Secondary School traces its roots back to 1974, when it was established through the efforts of the late Dr. Zachary Onyonka, then the Member of Parliament for Kitutu Chache. The school was first founded as a boarding institution for girls under the name Metembe Girls, and it played a significant role in expanding access to secondary education in the region. Shortly afterward, sponsorship was taken over by the Catholic Church, which provided stability and guidance in its formative years. It was at this point that the school adopted its current name, St. John’s Metembe Secondary School, marking the beginning of its long journey as an institution of learning.
-
-The early years of the school were marked by both promise and challenges. During the late 1990s, particularly between 1997 and 1999, the school experienced its highest enrolment, reaching close to 400 students. This period represented the peak of its student population. However, the rapid growth of nearby secondary schools such as Nyansakia, Nyakeyo, Omogumo, Tambacha, and Nyakoora gradually reduced the catchment area, leading to a noticeable decline in numbers. The competition for students became a defining factor in the decades that followed, reshaping the fortunes of St. John’s Metembe.
-
-The year 1979 stands out as one of the most difficult moments in the school’s history. Enrolment dropped sharply to the point where closure seemed almost inevitable. It was only through the intervention of the District Education Office, which engaged the local community and emphasized the importance of education, that the school remained open. Government support in the form of grants also played a crucial role in sustaining operations, though the issue of levies and community contributions remained a recurring challenge. Despite these obstacles, the school managed to remain afloat, a testimony to the resilience of both its leadership and the surrounding community.
-
-Leadership at St. John’s Metembe has passed through the hands of a number of principals, each contributing to the institution in their own time. The first Teachers Service Commission–appointed principal was Mr. Nyambeche, who laid the foundation for administration and academic structure. He was succeeded by Mr. Nyaseti, under whose tenure the school continued to build its systems. In 1996, Mr. Pingo assumed office, working with a staff of five T.S.C. teachers to strengthen the academic program. His tenure was followed in 2004 by Mr. Erick Onsongo, who in turn was succeeded in 2006 by Mr. Patric Otwori, serving until 2011. Afterward, Mr. Zachary Nyagoto took over, guiding the school from 2011 until his departure in 2018.
-
-The next phase of leadership began in 2019, when Mr. Christopher Ayieko K. became principal. His tenure lasted until 2021, during which time the school’s enrolment rose to about 278 students, reflecting renewed growth in student numbers. In 2021, leadership was handed over to Mr. Kenneth Ogato, who served until January 2025. At the start of 2025, Mr. Evans Mogere assumed office and is the current principal.
-
-Today, St. John’s Metembe stands at a transitional point. The school has an enrolment of 118 students, organized into three classes: Form 2, Form 3, and Form 4. In line with the national transition from the 8-4-4 system to the Competency-Based Education (CBE) curriculum, the Form 1 class was not admitted, and the traditional intake has been phased out. This shift marks both a challenge and an opportunity, as the school adapts to changing educational policies while continuing to serve the local community.</p>
+                    <p>St. John's Metembe Secondary School was established in 1974 through the efforts of the late Dr. Zachary Onyonka, then the Member of Parliament for Kitutu Chache. Originally founded as a boarding institution for girls named Metembe Girls, the school was later taken over by the Catholic Church and renamed St. John's Metembe Secondary School.</p>
+                    
+                    <p>Throughout its history, the school has experienced both growth and challenges. Today, St. John's Metembe continues to serve the local community with a focus on providing quality education and developing well-rounded individuals.</p>
+                    
+                    <div class="read-more-content" id="moreContent">
+                        <p>The school has been led by several principals over the years, each contributing to its development. The first TSC-appointed principal was Mr. Nyambeche, followed by Mr. Nyaseti, Mr. Pingo (1996), Mr. Erick Onsongo (2004), Mr. Patric Otwori (2006-2011), Mr. Zachary Nyagoto (2011-2018), Mr. Christopher Ayieko K. (2019-2021), Mr. Kenneth Ogato (2021-2025), and currently Mr. Evans Mogere (2025-present).</p>
+                        
+                        <p>Today, St. John's Metembe has an enrollment of 118 students across Form 2, Form 3, and Form 4 classes. In line with the national transition to the Competency-Based Education (CBE) curriculum, the school did not admit a Form 1 class, marking a significant shift in its educational approach while continuing to serve the local community.</p>
+                    </div>
+                    
+                    <button class="read-more-btn" id="readMoreBtn">Read More</button>
                 </div>
                 <div class="about-image">
                     <img src="images/group.jpg" alt="School History">
@@ -781,7 +864,7 @@ Today, St. John’s Metembe stands at a transitional point. The school has an en
                     </div>
                 </div>
                 <div class="academic-card">
-                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80 " alt="Subjects">
+                    <img src="images/subjects1.jpg" alt="Subjects">
                     <div class="academic-content">
                         <h3>Subjects Offered</h3>
                         <p>We offer a wide range of subjects including Sciences, Humanities, Languages, and Technical subjects.</p>
@@ -813,14 +896,14 @@ Today, St. John’s Metembe stands at a transitional point. The school has an en
                     </div>
                 </div>
                 <div class="life-card">
-                    <img src="https://images.unsplash.com/photo-1552667466-07770ae110d0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Sports">
+                    <img src="images/practice1.jpg" alt="Sports">
                     <div class="life-overlay">
                         <h3>Sports</h3>
                         <p>Football, basketball, volleyball, athletics, and more.</p>
                     </div>
                 </div>
                 <div class="life-card">
-                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Cultural Activities">
+                    <img src="images/practice1.jpg" alt="Cultural Activities">
                     <div class="life-overlay">
                         <h3>Cultural Activities</h3>
                         <p>Music, drama, and art programs to nurture creativity.</p>
@@ -838,7 +921,7 @@ Today, St. John’s Metembe stands at a transitional point. The school has an en
             </div>
             <div class="news-grid">
                 <div class="news-card">
-                    <img src="https://images.unsplash.com/photo-1552667466-07770ae110d0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Event" height="50%">
+                    <img src="images/achievements2.jpg" alt="Event">
                     <div class="news-content">
                         <span class="news-date">October 11, 2025</span>
                         <h3>Annual Sports Day</h3>
@@ -846,7 +929,7 @@ Today, St. John’s Metembe stands at a transitional point. The school has an en
                     </div>
                 </div>
                 <div class="news-card">
-                    <img src="images/achievements2.jpg" alt="Event" style="height: 50%;">
+                    <img src="images/achievements2.jpg" alt="Event">
                     <div class="news-content">
                         <span class="news-date">October 15, 2025</span>
                         <h3>Science Fair</h3>
@@ -854,7 +937,7 @@ Today, St. John’s Metembe stands at a transitional point. The school has an en
                     </div>
                 </div>
                 <div class="news-card">
-                    <img src="images/teachers.jpg" alt="Event" height="50%">
+                    <img src="images/teachers.jpg" alt="Event">
                     <div class="news-content">
                         <span class="news-date">October 20, 2025</span>
                         <h3>Parents Meeting</h3>
@@ -888,7 +971,7 @@ Today, St. John’s Metembe stands at a transitional point. The school has an en
                     <a href="#" class="download-btn">Download Admission Letter</a>
                 </div>
                 <div class="admissions-image">
-                    <img src="images/subjects1.jpg" alt="Admissions" class="about-image" style="width: 500px;height: auto;">
+                    <img src="images/subjects1.jpg" alt="Admissions">
                 </div>
             </div>
         </div>
@@ -913,17 +996,17 @@ Today, St. John’s Metembe stands at a transitional point. The school has an en
                     <div class="resource-icon">
                         <i class="fas fa-calendar-alt"></i>
                     </div>
-                    <h3>Exam Timetables</h3>
-                    <p>View and download exam schedules</p>
-                    <a href="#" class="resource-link">View Timetables</a>
+                    <h3>Academic Calendar of Events</h3>
+                    <p>View and download the academic calendar for the current year</p>
+                    <a href="#" class="resource-link">View Calendar</a>
                 </div>
                 <div class="resource-card">
                     <div class="resource-icon">
-                        <i class="fas fa-user-graduate"></i>
+                        <i class="fas fa-calendar-day"></i>
                     </div>
-                    <h3>Student Portal</h3>
-                    <p>Access your academic information</p>
-                    <a href="#" class="resource-link">Login</a>
+                    <h3>Teaching Timetable</h3>
+                    <p>Download the teaching timetable for Term 3, 2025</p>
+                    <a href="#" class="resource-link">Download Timetable</a>
                 </div>
                 <div class="resource-card">
                     <div class="resource-icon">
@@ -964,6 +1047,10 @@ Today, St. John’s Metembe stands at a transitional point. The school has an en
                             <span>Monday - Friday: 8:00 AM - 5:00 PM</span>
                         </li>
                     </ul>
+                    
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63835.535868767976!2d34.84441094999999!3d-0.8553139999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182b23790d8a5a3f%3A0x9d9717156e2d2d7a!2sKisii!5e0!3m2!1sen!2ske!4v1728827344256!5m2!1sen!2ske" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
                 </div>
                 <div class="contact-form">
                     <form>
@@ -1006,8 +1093,8 @@ Today, St. John’s Metembe stands at a transitional point. The school has an en
                     <h3>Resources</h3>
                     <ul>
                         <li><a href="#">E-Library</a></li>
-                        <li><a href="#">Exam Timetables</a></li>
-                        <li><a href="#">Student Portal</a></li>
+                        <li><a href="#">Academic Calendar</a></li>
+                        <li><a href="#">Teaching Timetable</a></li>
                         <li><a href="#">Staff Portal</a></li>
                         <li><a href="#">Downloads</a></li>
                     </ul>
@@ -1036,13 +1123,6 @@ Today, St. John’s Metembe stands at a transitional point. The school has an en
             navMenu.classList.toggle('active');
             mobileMenuBtn.innerHTML = navMenu.classList.contains('active') ? 
                 '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-        });
-
-        // Student Portal Button Functionality
-        const portalBtn = document.querySelector('.portal-btn');
-        portalBtn.addEventListener('click', function() {
-            // You can replace this URL with your actual student portal URL
-            window.open('https://example-student-portal.com', '_blank');
         });
 
         // Smooth Scrolling for Navigation Links
@@ -1088,19 +1168,97 @@ Today, St. John’s Metembe stands at a transitional point. The school has an en
             observer.observe(section);
         });
 
-        // Sticky Header
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-                header.style.background = 'var(--light-blue)';
+        // Read More functionality for About section
+        const readMoreBtn = document.getElementById('readMoreBtn');
+        const moreContent = document.getElementById('moreContent');
+        
+        readMoreBtn.addEventListener('click', function() {
+            if (moreContent.style.display === 'block') {
+                moreContent.style.display = 'none';
+                readMoreBtn.textContent = 'Read More';
             } else {
-                header.style.boxShadow = 'none';
-                header.style.background = 'var(--light-blue)';
+                moreContent.style.display = 'block';
+                readMoreBtn.textContent = 'Read Less';
+            }
+        });
+
+        // Admin Login Functionality
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const loginError = document.getElementById('loginError');
+            const adminLoginForm = document.getElementById('adminLoginForm');
+            const adminButtons = document.getElementById('adminButtons');
+            
+            // Simple authentication (in a real application, this would be server-side)
+            if (username === 'admin' && password === 'admin123') {
+                // Successful login
+                loginError.style.display = 'none';
+                adminLoginForm.classList.add('hidden');
+                adminButtons.classList.remove('hidden');
+                
+                // Store login status in sessionStorage (cleared on tab close)
+                sessionStorage.setItem('adminLoggedIn', 'true');
+            } else {
+                // Failed login
+                loginError.style.display = 'block';
+            }
+        }
+
+        // Protect private sections (Teachers, Students, Staff, Classes)
+        document.querySelectorAll('.cta-btn.private').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const href = this.getAttribute('href');
+                const isLoggedIn = sessionStorage.getItem('adminLoggedIn');
+                
+                if (isLoggedIn === 'true') {
+                    // Allow navigation to the private page
+                    window.location.href = href;
+                } else {
+                    // Show alert and scroll to login form
+                    alert('Please log in as admin to access this section.');
+                    window.scrollTo({
+                        top: document.querySelector('#adminLoginForm').offsetTop - 90,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Check login status on page load and reset it
+        window.addEventListener('DOMContentLoaded', function() {
+            const adminLoginForm = document.getElementById('adminLoginForm');
+            const adminButtons = document.getElementById('adminButtons');
+            
+            // Reset login status on page load (force login on landing page)
+            sessionStorage.removeItem('adminLoggedIn');
+            adminLoginForm.classList.remove('hidden');
+            adminButtons.classList.add('hidden');
+
+            // Ensure buttons are disabled until login
+            document.querySelectorAll('.cta-btn.private').forEach(button => {
+                button.style.pointerEvents = 'none';
+                button.style.opacity = '0.5';
+            });
+        });
+
+        // Clear login status on window close
+        window.addEventListener('beforeunload', function() {
+            sessionStorage.removeItem('adminLoggedIn');
+        });
+
+        // Re-enable buttons after successful login
+        document.querySelector('.login-btn').addEventListener('click', function() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            if (username === 'admin' && password === 'admin123') {
+                document.querySelectorAll('.cta-btn.private').forEach(button => {
+                    button.style.pointerEvents = 'auto';
+                    button.style.opacity = '1';
+                });
             }
         });
     </script>
 </body>
 </html>
-
-
